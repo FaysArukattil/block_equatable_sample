@@ -1,3 +1,4 @@
+// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:block_equatable_sample/models/respproducts.dart';
 import 'package:block_equatable_sample/services/apiservice.dart';

@@ -1,4 +1,4 @@
-import 'package:block_equatable_sample/controller/bloc/product_bloc.dart';
+import 'package:block_equatable_sample/controller/bloc/products/bloc/product_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:block_equatable_sample/models/respproducts.dart';
+import 'package:block_equatable_sample/models/resptodoall.dart';
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
@@ -17,6 +18,25 @@ class ApiService {
         var json = jsonDecode(response.body);
         var res = Respproducts.fromJson(json);
         return res.products;
+      }
+    } catch (e) {
+      logger.e(e);
+    }
+    return null;
+  }
+
+  Future<List<Todos>?> loadtodo() async {
+    Uri url = Uri.parse("$baseurl/todos");
+    try {
+      final response = await http.get(url);
+
+      if (response.statusCode == 200) {
+        logger.i(response.body);
+
+        var json = jsonDecode(response.body);
+        var res = Resptodoall.fromJson(json);
+        logger.i(res.todos);
+        return res.todos;
       }
     } catch (e) {
       logger.e(e);

@@ -12,6 +12,7 @@ final class Productloading extends ProductState {
   List<Object> get props => [];
 }
 
+// ignore: must_be_immutable
 final class Productloaded extends ProductState {
   List<Products>? plist;
 
@@ -20,6 +21,7 @@ final class Productloaded extends ProductState {
   List<Object> get props => [plist!];
 }
 
+// ignore: must_be_immutable
 final class ProductLoadingError extends ProductState {
   String? errormessage;
 
